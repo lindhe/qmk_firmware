@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+-------+------.
  *                                 |      |      |  ~   |       | PgUp |       |      |
  *                                 | Space|Back- |------|       |------|  Tab  |Enter |
- *                                 |      |space | Esc  |       | PgDn |       | L2   |
+ *                                 |      |space | Wake |       | PgDn |       | L2   |
  *                                 `--------------------'       `---------------------'
  */
 
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     CTL_T(NO_APOS),  NO_CIRC,  NO_ASTR,  KC_LALT, KC_LGUI,
                                                KC_LCTRL,  KC_LALT,
                                                           NO_TILD,
-                                         KC_SPC, KC_BSPC, KC_ESC,
+                                         KC_SPC, KC_BSPC, KC_WAKE,
     // right hand
          KC_MS_BTN3,   KC_6,   KC_7,    KC_8,    KC_9,    KC_0,     NO_PLUS,
          TG(SYMB),  KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,     NO_AA,
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
  *                                 |      |      |------|       |------|      |      |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      | Sleep|       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
 // SYMBOLS
@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                        KC_TRNS,KC_TRNS,
                                                KC_TRNS,
-                               KC_TRNS,KC_TRNS,KC_TRNS,
+                               KC_TRNS,KC_TRNS,KC_SLEP,
        // right hand
        KC_TRNS, KC_TRNS, KC_TRNS, KC_PSLS, KC_PAST, KC_PMNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_7,    KC_8,    KC_9,    KC_PPLS, KC_TRNS,
