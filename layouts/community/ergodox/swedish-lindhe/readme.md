@@ -25,6 +25,7 @@ L0:
 * Improved reachability of meta buttons (LCtrl, LALt, AltGr, LGui etc.)
 * Cluster Page Up/Down + Home/End by the right thumb
 * Vim-like arrow layout in right bottom row
+    (up/down are on index/middle finger, left/right on ring/little finger)
 
 * Set media layer toggle to right thumb (Enter)
 * Set apostrophe on LCtl (putting it next to some other small
