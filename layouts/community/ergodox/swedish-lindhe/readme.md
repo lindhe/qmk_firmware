@@ -26,6 +26,7 @@ L0:
 * Cluster Page Up/Down + Home/End by the right thumb
 * Vim-like arrow layout in right bottom row
     (up/down are on index/middle finger, left/right on ring/little finger)
+* Extra Enter button, for easy reach with left hand
 
 * Set media layer toggle to right thumb (Enter)
 * Set apostrophe on LCtl (putting it next to some other small
