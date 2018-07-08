@@ -1,5 +1,16 @@
 # swedish-lindhe ErgoDox (EZ) keymap
 
+## USAGE
+
+From the root directory of this repo, run:
+
+```
+$ make ergodox_ez:swedish-lindhe
+$ teensy-loader-cli -mmcu=atmega32u4 -w ergodox_ez_swedish-lindhe.hex
+```
+
+## Description
+
 This is a setup that is very useful for me. It may or may not be for
 you. I will use it in conjunction with the A5 overlayed sv_SE layout.
 
