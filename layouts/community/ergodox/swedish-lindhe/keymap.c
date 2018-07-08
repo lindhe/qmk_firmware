@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "config.h"
 #include "debug.h"
 #include "action_layer.h"
 #include "keymap_swedish.h"
