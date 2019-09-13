@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | LShft  | Z    | X    | C    | V    | B    |  '   |           |      | N    | M    | ,    | .    | -    | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LCtl |  ^   | *    | LAlt | LGui |                                       | AltGr| Down |  Up  | Left | Right|
- *   | (')  |  " ~ | '  ´ |      |      |                                       |      |      |      |      |      |
+ *   |      |  " ~ | '  ´ |      |      |                                       | (')  |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,--------------.
  *                                        | LCtl | LAlt |       | Home |   End  |
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,          KC_Q,     KC_W,     KC_E,    KC_R,    KC_T,   MO(SYMB),
     KC_CAPS,         KC_A,     KC_S,     KC_D,    KC_F,    KC_G,
     KC_LSFT,         KC_Z,     KC_X,     KC_C,    KC_V,    KC_B,   NO_ACUT,
-    CTL_T(NO_APOS),  NO_CIRC,  NO_ASTR,  KC_LALT, KC_LGUI,
+    KC_LCTRL,        NO_CIRC,  NO_ASTR,  KC_LALT, KC_LGUI,
                                                KC_LCTRL,  KC_LALT,
                                                           NO_TILD,
                                          KC_SPC, KC_BSPC, KC_ENT,
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TG(SYMB),  KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,     NO_AA,
                     KC_H,   KC_J,    KC_K,    KC_L,    NO_OSLH,  NO_AE,
          KC_DELT,   KC_N,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,  KC_RSFT,
-                            NO_ALGR, KC_DOWN, KC_UP,   KC_LEFT,  KC_RGHT,
+                            ALGR_T(NO_APOS), KC_DOWN, KC_UP,   KC_LEFT,  KC_RGHT,
          KC_HOME,        KC_END,
          KC_PGUP,
          KC_PGDN, KC_TAB, LT(MDIA, KC_ENT)
