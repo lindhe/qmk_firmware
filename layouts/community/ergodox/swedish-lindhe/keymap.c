@@ -23,6 +23,7 @@
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
+#define NUMP 3 // numpad (numlock disabled)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
@@ -31,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Print     |   !  |  "   |  #   |  #   |  %   |      |       |Middle|   &  |  /   |  (   |  )   |  =   |  ?        |
  * | Screen    |   1  |  2 @ |  3 £ |  4 $ |  5   | F11  |       |Mouse |   6  |  7 { |  8 [ |  9 ] |  0 } |  + \      |
  * |-----------+------+------+------+------+-------------|       |------+------+------+------+------+------+-----------|
- * | Tab       | Q    | W    | E    | R    | T    | ~L1  |       |  L1  | Y    | U    | I    | O    | P    | Å         |
+ * | Tab       | Q    | W    | E    | R    | T    | ~L1  |       |  L3  | Y    | U    | I    | O    | P    | Å         |
  * |-----------+------+------+------+------+------|      |       |      |------+------+------+------+------+-----------|
  * | CapsLk    | A    | S    | D    | F    | G    |------|       |------| H    | J    | K    | L    | Ö    | Ä         |
  * |-----------+------+------+------+------+------| `    |       | Del  |------+------+------+------+------+-----------|
@@ -61,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                          KC_SPC, KC_BSPC, KC_ENT,
     // right hand
          KC_MS_BTN3,   KC_6,   KC_7,    KC_8,    KC_9,    KC_0,     NO_PLUS,
-         TG(SYMB),  KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,     NO_AA,
+         TG(NUMP),  KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,     NO_AA,
                     KC_H,   KC_J,    KC_K,    KC_L,    NO_OSLH,  NO_AE,
          KC_DELT,   KC_N,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,  RSFT_T(NO_APOS),
                             NO_ALGR, KC_DOWN, KC_UP,   KC_LEFT,  KC_RGHT,
@@ -154,6 +155,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
 ),
+
+/* Keymap 1: Symbol Layer
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |        |      |      |      |      |      |      |           |      |      |      |  /   |   *  |  -   |        |
+ * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |           |      |      |  7   |  8   |  9   |  +   |        |
+ * |        |      |      |      |      |      |      |           |      |      | Home | Up   | PgUp |      |        |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |------|           |------|      |  4   |  5   |  6   |  +   |        |
+ * |        |      |      |      |      |      |------|           |------|      |Left  |      | Right|      |        |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |           |      |      |  1   |  2   |  3   | Enter|        |
+ * |        |      |      |      |      |      |      |           |      |      | End  | Down | PgUp |      |        |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   |      |      |      |      |      |                                       |  0   | ,    | .    | Enter|      |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |      |      |       |      |      |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |------|       |------|      |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+// SYMBOLS
+[NUMP] = LAYOUT_ergodox(
+       // left hand
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                       KC_TRNS,KC_TRNS,
+                                               KC_TRNS,
+                               KC_TRNS,KC_TRNS,KC_TRNS,
+       // right hand
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_PSLS, KC_PAST, KC_PMNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PPLS, KC_TRNS,
+                KC_TRNS, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_TRNS,
+                         KC_KP_0, KC_COMM, KC_DOT,  KC_PENT, KC_TRNS,
+       KC_TRNS, KC_TRNS,
+       KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS
+),
+
 };
 
 const uint16_t PROGMEM fn_actions[] = {
