@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----------+------+------+------+------+------|      |       |      |------+------+------+------+------+-----------|
  * | CapsLk    | A    | S    | D    | F    | G    |------|       |------| H    | J    | K    | L    | Ö    | Ä         |
  * |-----------+------+------+------+------+------| ` '  |       | Del  |------+------+------+------+------+-----------|
- * | LShft     | Z    | X    | C    | V    | B    | (~L3)|       |(~L1) | N    | M    | ,    | .    | -    | RShift (')|
+ * | LShft     | Z    | X    | C    | V    | B    | (~L3)|       |      | N    | M    | ,    | .    | -    | RShift (')|
  * `-----------+------+------+------+------+-------------'       `-------------+------+------+------+------+-----------'
  *   | LCtl    |  ^   | *    | LAlt | LGui |                                   | AltGr| Down |  Up  | Left | Right|
  *   |         |  " ~ | '  ´ |      |      |                                   |      |      |      |      |      |
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_MS_BTN3, KC_6,   KC_7,    KC_8,    KC_9,    KC_0,     NO_PLUS,
          TG(NUMP),   KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,     NO_AA,
                      KC_H,   KC_J,    KC_K,    KC_L,    NO_OSLH,  NO_AE,
-   LT(SYMB,KC_DELT), KC_N,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,  RSFT_T(NO_APOS),
+           KC_DELT,  KC_N,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,  RSFT_T(NO_APOS),
                             NO_ALGR, KC_DOWN, KC_UP,   KC_LEFT,  KC_RGHT,
          KC_HOME,        KC_END,
          KC_PGUP,
