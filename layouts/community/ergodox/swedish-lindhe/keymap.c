@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |  F1  |  F2  |  F3  |  F4  |      |      |           |      |      |  7   |  8   |  9   |  +   |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |  F5  |  F6  |  F7  |  F8  |      |------|           |------|      |  4   |  5   |  6   |  +   |        |
- * |--------+------+------+------+------+------|      |           |Teensy|------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |  F9  |  F10 |  F11 |  F12 |      |      |           |      |      |  1   |  2   |  3   | Enter|        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |  0   | ,    | .    | Enter|      |
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS, KC_TRNS, KC_PSLS, KC_PAST, KC_PMNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_7,    KC_8,    KC_9,    KC_PPLS, KC_TRNS,
                 KC_TRNS, KC_4,    KC_5,    KC_6,    KC_PPLS, KC_TRNS,
-       RESET,   KC_TRNS, KC_1,    KC_2,    KC_3,    KC_PENT, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_1,    KC_2,    KC_3,    KC_PENT, KC_TRNS,
                          KC_0,    KC_COMM, KC_DOT,  KC_PENT, KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
