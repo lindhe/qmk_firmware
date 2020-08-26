@@ -344,7 +344,7 @@ See also: [Layer Switching](feature_layers.md#switching-and-toggling-layers)
 |`LT(layer, kc)` |Turn on `layer` when held, `kc` when tapped                                       |
 |`TG(layer)`     |Toggle `layer` on or off                                                          |
 |`TO(layer)`     |Turns on `layer` and turns off all other layers, except the default layer |
-|`TT(layer)`     |Normally acts like MO unless it's tapped multiple times, which toggles `layer` on |
+|`TT(layer)`     |Normally acts like MO unless it's tapped at least once, in which case it toggles `layer` on |
 
 ## Leader Key :id=leader-key
 
